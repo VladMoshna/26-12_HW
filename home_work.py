@@ -43,11 +43,16 @@ print(f"Кожна людина повинна заплатити: {total_amount
 
 # 6 завдання
 
-rent_cost = float(input("Введіть вартість оренди за день: "))
-number_of_days = int(input("Введіть на скільки днів ви арендували автомобіль: "))
-sum_outpost = float(input("Введіть суму застави: "))
+price = float(input("Вартість оренди за день: "))
+days = int(input("Кількість днів: "))
+deposit = float(input("Сума застави: "))
 
-res = rent_cost * number_of_days
+rent_sum = price * days
+total_pay = rent_sum + deposit
+return_money = deposit
+one_day_price = rent_sum / days
 
-print(f"Вам треба заплатити(застава повертається): {res}")
-print(f"Вартість оренди за один день: {res / number_of_days}")
+print(f"Загальна вартість оренди (без застави): {rent_sum} грн")
+print(f"Сума до оплати з урахуванням застави: {total_pay} грн")
+print(f"Сума, яку повернуть після повернення авто: {return_money} грн")
+print(f"Вартість оренди за один день: {one_day_price} грн")
